@@ -1,4 +1,4 @@
-name: Destroy EKS Cluster
+name: Destroy Terraform Backend
 
 on:
   workflow_dispatch:
