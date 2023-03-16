@@ -20,7 +20,7 @@ jobs:
       uses: aws-actions/configure-aws-credentials@v1
       with:
         role-to-assume: ${{ secrets.AWS_CI_ROLE }}
-        aws-region: us-west-2
+        aws-region: ap-southeast-1
 
     - uses: actions/checkout@v3
     - uses: hashicorp/setup-terraform@v2
