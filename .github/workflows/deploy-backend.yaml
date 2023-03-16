@@ -16,7 +16,7 @@ jobs:
         working-directory: backend
     steps:
     - name: Configure AWS credentials
-      uses: aws-actions/configure-aws-credentials@v1
+      uses: aws-actions/configure-aws-credentials@b8c74de
       with:
         role-to-assume: ${{ secrets.CI_ROLE }}
         aws-region: ap-southeast-1
