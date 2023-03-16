@@ -1,0 +1,12 @@
+name: Deploy ArgoCD
+on:
+  workflow_dispatch:
+
+jobs:
+  call-deploy-workflow:
+    uses: ./.github/workflows/deploy.yaml
+    with: 
+      work-dir: "argocd"
+      aws-region: "ap-southeast-1"
+    secrets:
+      CI_ROLE: ${{ secrets.AWS_CI_ROLE }}
