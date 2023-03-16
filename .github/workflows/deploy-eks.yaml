@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  infra_deploy:
+  eks_deploy:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
