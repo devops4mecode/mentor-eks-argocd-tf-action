@@ -1,0 +1,59 @@
+AWS EKS
+
+# Initialize Terraform
+terraform init -backend-config=backend.tfvars
+
+# Generate Plan
+terraform plan -out=eks.tfplan -var-file=eks.tfvars
+
+# Apply the Plan
+terraform apply eks.tfplan
+
+ArgoCD
+
+# Initialize Terraform
+terraform init -backend-config=backend.tfvars
+
+# Generate Plan
+terraform plan -out=argocd.tfplan
+
+# Apply the Plan
+terraform apply argocd.tfplan
+
+AWS Services/Resources:
+VPC:
+https://ap-southeast-1.console.aws.amazon.com/vpc/home?region=ap-southeast-1#vpcs:search=do4m-eks-argocd-dev-vpc
+Network Interface:
+https://ap-southeast-1.console.aws.amazon.com/ec2/home?region=ap-southeast-1#NIC
+Subnets:
+https://ap-southeast-1.console.aws.amazon.com/vpc/home?region=ap-southeast-1#subnets:search=do4m-eks-argocd-dev-vpc-public-ap-southeast-1
+Route tables :
+https://ap-southeast-1.console.aws.amazon.com/vpc/home?region=ap-southeast-1#RouteTables
+Internet gateways:
+https://ap-southeast-1.console.aws.amazon.com/vpc/home?region=ap-southeast-1#igws
+Security Groups:
+https://ap-southeast-1.console.aws.amazon.com/ec2/home?region=ap-southeast-1#SecurityGroups
+EIP:
+https://ap-southeast-1.console.aws.amazon.com/vpc/home?region=ap-southeast-1#Addresses:
+Load Balancer:
+https://ap-southeast-1.console.aws.amazon.com/ec2/home?region=ap-southeast-1#LoadBalancers:
+
+IAM:
+1. load-balancer-controller
+2. external-dns
+3. "${var.name_prefix}-developers"
+https://us-east-1.console.aws.amazon.com/iamv2/home?region=ap-southeast-1#/roles
+EKS Cluster:
+https://ap-southeast-1.console.aws.amazon.com/eks/home?region=ap-southeast-1#/clusters
+cloudwatch-log group
+https://ap-southeast-1.console.aws.amazon.com/cloudwatch/home?region=ap-southeast-1#logsV2:log-groups
+ACM:
+https://ap-southeast-1.console.aws.amazon.com/acm/home?region=ap-southeast-1#/certificates/list
+KMS:
+https://ap-southeast-1.console.aws.amazon.com/kms/home?region=ap-southeast-1#/kms/keys
+S3 Bucket:
+https://s3.console.aws.amazon.com/s3/buckets?region=ap-southeast-1
+DynamoDB Tables:
+https://ap-southeast-1.console.aws.amazon.com/dynamodbv2/home?region=ap-southeast-1#tables
+Domain:
+https://us-east-1.console.aws.amazon.com/route53/v2/hostedzones?region=us-east-1#ListRecordSets/Z01759046SRCBME1EH63/records
