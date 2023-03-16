@@ -1,4 +1,4 @@
-name: Base pipeline to deploy infrastructure components
+name: Base Deploy Infra
 on:
   workflow_call:
     inputs:
