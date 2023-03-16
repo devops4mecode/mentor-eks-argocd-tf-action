@@ -1,9 +1,7 @@
 name: Create Backend for Terraform Infra
 on:
   workflow_dispatch:
-    secrets:
-      CI_ROLE:
-        required: true
+
 jobs:
   infra_deploy:
     runs-on: ubuntu-latest
