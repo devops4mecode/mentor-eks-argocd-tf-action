@@ -31,4 +31,4 @@ jobs:
 
     - name: Terraform Destroy
       id: destroy
-      run: terraform destroy -auto-approve -no-color -input=false -var-file=eks.tfvars
+      run: terraform destroy -auto-approve -var-file=eks.tfvars -lock=false
