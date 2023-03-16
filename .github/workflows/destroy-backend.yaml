@@ -27,7 +27,7 @@ jobs:
 
     - name: Terraform Init
       id: init
-      run: terraform init -backend-config=backend.tfvars
+      run: terraform init
 
     - name: Terraform Destroy
       id: destroy
