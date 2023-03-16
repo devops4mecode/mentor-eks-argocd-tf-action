@@ -35,11 +35,11 @@ jobs:
 
     - name: Terraform Validate
       id: validate
-      run: terraform validate
-      
+      run: terraform validate -no-color
+
     - name: Terraform Plan
       id: plan
-      run: terraform plan
+      run: terraform plan -no-color
       continue-on-error: true
 
     - name: Terraform Plan Status
@@ -48,4 +48,4 @@ jobs:
 
     - name: Terraform Apply
       if: github.ref == 'refs/heads/master'
-      run: terraform apply -auto-approve -input=false -var-file=eks.tfvars
+      run: terraform apply -auto-approve -var-file=eks.tfvars
