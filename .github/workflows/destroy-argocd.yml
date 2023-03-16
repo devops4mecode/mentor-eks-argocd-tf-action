@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  destroy_eks:
+  destroy_argocd:
     runs-on: ubuntu-latest
     permissions:
       id-token: write
@@ -31,4 +31,4 @@ jobs:
 
     - name: Terraform Destroy
       id: destroy
-      run: terraform destroy -auto-approve -no-color -input=false
+      run: terraform destroy -auto-approve -lock=false

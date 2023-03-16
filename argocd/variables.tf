@@ -61,4 +61,3 @@ variable "argocd_ingress_tls_secret_name" {
 variable "argocd_name" {
   default = "do4m-argocd"
 }
-
