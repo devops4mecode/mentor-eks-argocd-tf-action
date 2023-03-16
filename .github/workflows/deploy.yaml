@@ -28,7 +28,7 @@ jobs:
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-        role-to-assume: ${{ secrets.AWS_CI_ROLE }}
+        role-to-assume: ${{ secrets.CI_ROLE }}
         aws-region: ${{ inputs.aws-region }}
 
     - uses: actions/checkout@v3
