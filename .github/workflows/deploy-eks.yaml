@@ -39,7 +39,7 @@ jobs:
 
     - name: Terraform Plan
       id: plan
-      run: terraform plan -no-color
+      run: terraform plan -no-color -lock=false
       continue-on-error: true
 
     - name: Terraform Plan Status
@@ -48,4 +48,4 @@ jobs:
 
     - name: Terraform Apply
       if: github.ref == 'refs/heads/master'
-      run: terraform apply -auto-approve -var-file=eks.tfvars
+      run: terraform apply -auto-approve -var-file=eks.tfvars -lock=false
